@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "Bash",
+			"path": "../Bash"
+		},
+		{
+			"name": "Cpp",
+			"path": "../Cpp"
+		},
+		{
+			"name": "eCTHPv2",
+			"path": "../eCTHPv2"
+		}
+	],
+	"settings": {}
+}
