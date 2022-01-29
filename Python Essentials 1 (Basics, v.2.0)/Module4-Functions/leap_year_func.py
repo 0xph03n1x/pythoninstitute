@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 def is_leap_year(year):
-    if year % 4 !=0:
+    if year < 1582:
+        return False
+    elif year % 4 !=0:
         return False
     elif year % 100 != 0:
         return True
