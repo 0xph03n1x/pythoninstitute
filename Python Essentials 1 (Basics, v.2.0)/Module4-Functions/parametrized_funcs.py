@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 
-from email.errors import FirstHeaderLineIsContinuationDefect
-
-
 def introduction(first_name, last_name="Smith"):
     print("Hello my name is", first_name, last_name)
 
