@@ -1,10 +1,11 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 # coding: utf-8import sys
 import socket
 import sys
 
 pincode = 0
-password = "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ"try:
+password = "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ"
+try:
     # Connect to server
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect(("127.0.0.1", 30002))
