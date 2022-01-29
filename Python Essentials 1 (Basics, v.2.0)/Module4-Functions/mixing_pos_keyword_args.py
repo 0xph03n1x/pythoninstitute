@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 
-from audioop import add
-
-
 def adding(a, b, c):
     print(a, "+", b, "+", c, "=", a + b + c)    
 
