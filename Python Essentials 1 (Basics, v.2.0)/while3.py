@@ -1,7 +1,7 @@
 word = "chupacabra"
 guess = str(input("Choose your animal: "))
 
-while guess != word:
+while True:
     if guess == word:
         break
     else:
